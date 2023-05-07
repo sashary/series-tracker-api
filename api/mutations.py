@@ -1,9 +1,10 @@
 import strawberry
 
-from api.services.series import add_series_to_track
-from models.model_series import SeriesTracking
+from api.services.series import add_series
+from models.model_series import Series
+
 
 @strawberry.type
 class Mutation:
-    add_series_to_track: SeriesTracking = strawberry.field(resolver=add_series_to_track)
+    add_series: Series = strawberry.field(resolver=add_series)
     
